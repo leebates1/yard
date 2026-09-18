@@ -1,37 +1,36 @@
 # TF Jones Yard — Quest VR games
 
-Adds two VR games and a card viewer to the Quest walkthrough tested by Lee.
+Open the GitHub Pages website in the Quest browser and select Enter VR. Press **Y on the left controller** for the games menu.
 
-## Upload to the existing GitHub Pages repository
+## Card album
 
-Replace the repository's root `index.html` with this folder's `index.html`, and upload the entire `assets` folder beside it. Keep `index.html` and `assets` together. Do not upload the enclosing `Quest3-Yard-Games-v2` folder as another directory.
+The album has a hard cover, a two-page spread, nine spreads holding all 18 cards, and animated page turns. Point at a collected card and pull the right trigger to inspect it. Unfound cards remain secret.
 
-The Pages settings and website address can stay the same. After Pages finishes deploying, reload the page in the Quest browser before selecting Enter VR. The original single-file v1 build remains available locally as a rollback.
+The inspector brings a larger card closer. Point at **Larger**, **Smaller** or **Flip** and pull the trigger. Hold the right grip and rotate your hand to examine it from different angles. **B** returns to the book; it does not exit VR.
 
-## VR controls
+## Staff-room darts
 
-- Left stick: walk. Right stick: turn.
-- Left Y: open/close the in-world games menu.
-- Right trigger: select menu buttons. In the Pokémon hunt, hold, swing gently and release to throw. A gentle point-and-release throw is also supported.
-- Right grip: hold to aim a teleport, release on green to move. In exploration, the right trigger also teleports as before.
-- Right B: close the menu, or stop the current game and open the menu. **Back to exploring** also ends the game without leaving VR.
-- Left X: return to the entrance.
-- Meta menu: exit VR.
+Select **Darts — go to the staff-room throwing line** in the games menu. This moves you to the marked line facing the existing dartboard.
 
-## Games
+Stay behind the line. Hold the right trigger, move your hand as though throwing a dart, then release the trigger. The dart uses measured controller movement, gravity, light drag and continuous collision checks. There is no automatic target selection or preselected landing point. A stationary release does not launch a dart.
 
-**Pokémon hunt:** open the games menu and start the hunt. Find the existing hidden balls around both units and upstairs. Hit them with a thrown ball to reveal their cards. Throws collide with scenery. Cards use the existing browser save, so progress on the same website/browser is retained.
+Visible 3D darts stick where they hit. Scores match the board artwork's singles, doubles, triples, outer bull and bullseye. Play nine darts for a total score; your best round saves on this browser. Press **A** after the ninth dart to start another round.
 
-**Jigglypuff:** find her in three hiding spots. The small instruction panel gives a room clue; positional notes help when sound is enabled. Get close, point at her and click the trigger. Completed rounds are saved locally.
+## Other games and controls
 
-**Card viewer:** open Card album in the games menu. Browse three cards per page, select Flip for the backs, and Previous/Next to turn pages. Unfound cards remain secret.
+- Pokémon hunt: hold trigger, swing and release a Poké Ball at the hidden balls. The existing 18-card collection and save are retained.
+- Jigglypuff: follow the room and sound clues; get close, point and pull the trigger. Find her three times.
+- Left stick walks; right stick turns.
+- Right grip teleports during games, except while using the album inspector. Right trigger also teleports when simply exploring.
+- Y opens/closes the menu. B goes back. **Back to exploring** ends the game while keeping VR active.
+- X returns to the yard entrance. Use the Meta menu to exit VR.
 
-Darts, memory match and forklift challenges have not been adapted for VR in this update.
+Memory match and forklift challenges remain desktop-only.
 
 ## Validation
 
-The source is based on the exact v1 index.html retrieved from leebates1/yard (commit 1cacb0e139c2d5f9fcd5fb47dd306e2d7d069d94).
+Automated checks construct the actual yard and simulate WebXR input. They cover walking, turning, collisions, teleporting, album navigation and inspection, pointer selection, hand rotation, controller release velocity, flight integration, scoring rings, board/floor impacts, a nine-dart round, replay, collection and hide-and-seek, and session exit. The publish package is checked against the tested build.
 
-Automated checks exercised the actual scene with a simulated renderer/WebXR input: walking, turning, collisions, teleport, menu pointer selection, trigger release, throw trajectory/collision math, all three hide-and-seek finds, saved collection updates, duplicate prevention, completion, and session exit. The packaged images were checked byte-for-byte against the original embedded assets and every JavaScript file was syntax checked.
+Headset feel and readability still need real Quest testing. The physics simulation is not a calibrated model of a particular real dart.
 
-This update still needs a Quest 3 test for throwing feel, visual readability, positional audio and frame rate. GitHub Pages publishes the files on the main branch.
+The website uses `index.html` and the adjacent `assets` directory. Keep them together. Game-script filenames are versioned to avoid loading an older cached game after an update. GitHub Pages publishes the main branch.
