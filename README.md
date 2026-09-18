@@ -2,6 +2,10 @@
 
 Open the GitHub Pages website in the Quest browser and select Enter VR. Press **Y on the left controller** for the games menu.
 
+## Menu design
+
+The VR setup screen, activity menu, album controls, progress panel and darts scoreboard share a navy-and-gold theme. Activities have distinct icons and accent colours. Pointing highlights buttons and slightly lifts album controls. The scoreboard shows nine throw markers and a prominent personal best.
+
 ## Card album
 
 The album has a hard cover, a two-page spread, nine spreads holding all 18 cards, and animated page turns. Point at a collected card and pull the right trigger to inspect it. Unfound cards remain secret.
