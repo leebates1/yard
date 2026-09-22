@@ -46,3 +46,7 @@ Automated checks construct the actual yard and simulate WebXR input. They cover 
 Headset feel and readability still need real Quest testing. The physics simulation is not a calibrated model of a particular real dart.
 
 The website uses `index.html` and the adjacent `assets` directory. Keep them together. Game-script filenames are versioned to avoid loading an older cached game after an update. GitHub Pages publishes the main branch.
+
+### Companion visibility update
+
+Jigglypuff now arrives ahead and to one side on clear ground, at a larger size. Raise your left wrist and select **Call Jigglypuff** with the right trigger to bring her back nearby. Calling her during hide-and-seek keeps her hidden until that game ends. Each VR session starts with a fresh arrival.
