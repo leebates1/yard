@@ -39,6 +39,19 @@ Visible 3D darts stick where they hit. Scores match the board artwork's singles,
 
 Forklift challenges remain desktop-only.
 
+## Standing height
+
+The yard's ground is levelled to your feet when you enter VR, so the view does not
+depend on the headset's own floor calibration being right. Stand normally as the
+session begins; the first 1.2 seconds are measured, and crouching afterwards works
+as expected.
+
+To adjust it in the headset, **click the left thumbstick in and push it up or down**.
+The ground rises or falls; release to save it for next time. Walking is suspended
+while the stick is held. The setup screen has a **Standing height** setting for the
+target height, or to leave the headset floor alone, and a **Reset height** button
+that clears any manual adjustment.
+
 ## Validation
 
 Automated checks construct the actual yard and simulate WebXR input. They cover walking, turning, collisions, teleporting, album navigation and inspection, pointer selection, hand rotation, controller release velocity, flight integration, scoring rings, board/floor impacts, a nine-dart round, replay, collection and hide-and-seek, and session exit. The publish package is checked against the tested build.
@@ -56,3 +69,21 @@ Jigglypuff arrives ahead and to one side on clear ground. She follows in visible
 There is no permanent floating status card. Discoveries, hide-and-seek clues and completed rounds produce a small notification below eye level that fades after three seconds. Y opens the menu with current activity progress and the album count. Completing a hunt no longer forces the menu open.
 
 The framed wall scoreboard beside the dartboard tracks total points, the nine darts, the last result and personal best. Memory-match progress stays at the table.
+
+## Editing this project
+
+This repository holds built output only. There is no source tree and no source maps;
+`assets/runtime-1.js` is the yard itself and `assets/runtime-2-<hash>.js` is the VR
+layer, both minified. Changes are therefore made by editing a bundle directly, copying
+it to a new content-hashed filename, and pointing `index.html` at the copy. Readable
+logic is better placed in an inline script in `index.html`.
+
+A regenerated build would overwrite these edits. The standing-height fix is one such
+edit: the Quest player rig adds `window.yardFloorOffset` to its `y` position, and the
+script at the end of `index.html` measures and stores that offset. If the game is ever
+rebuilt from elsewhere, that change has to be carried across or the ground returns to
+wherever the headset believes the floor is.
+
+`window.yardDebug` exposes the running game for checks. VR behaviour can be exercised
+in a desktop browser by substituting `renderer.xr.getSession()`, `getReferenceSpace()`
+and `questBridge.frame`.
