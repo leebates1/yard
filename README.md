@@ -33,6 +33,7 @@ Visible 3D darts stick where they hit. Scores match the board artwork's singles,
 - Pokémon hunt: hold trigger, swing and release a Poké Ball at the hidden balls. The existing 18-card collection and save are retained.
 - Jigglypuff: follow the room and sound clues; get close, point and pull the trigger. Find her three times.
 - Left stick walks; right stick turns.
+- Click the left stick in and push it up or down to raise or lower yourself; release to save. See [Standing height](#standing-height).
 - Right grip teleports during games, except while using the album inspector. Right trigger also teleports when simply exploring.
 - Y opens/closes the menu. B goes back. **Back to exploring** ends the game while keeping VR active.
 - X returns to the yard entrance. Use the Meta menu to exit VR.
