@@ -6,11 +6,11 @@ Open the GitHub Pages website in the Quest browser and select Enter VR. Press **
 
 The VR setup screen, activity menu, album controls, progress panel and darts scoreboard share a navy-and-gold theme. Activities have distinct icons and accent colours. Pointing highlights buttons and slightly lifts album controls. The scoreboard shows nine throw markers and a prominent personal best.
 
-## Memory match, wrist menu and companion
+## Memory match and companion
 
 Select **Memory match** in the games menu to visit the staff-room table. Point at cards with your right controller and pull the trigger to turn them over. Match every pair; **A** starts another round after completion. The deck uses up to six collected Pokémon. With fewer than two collected cards, a clearly labelled four-pair practice deck is available; practice does not change the collection. Opening the menu pauses the mismatch timer.
 
-Raise the left controller towards your face to show the wrist panel. Point with the right controller and pull the trigger for **Games**, **Album**, **Hint** or **Home**. Lower your hand to hide it. Y remains available for opening the games menu.
+Press **Y** to open the games menu and album, **B** to go back and **X** to return to the yard entrance. The automatic wrist panel has been removed.
 
 A smaller Jigglypuff companion follows behind you, blinks and waves nearby. She follows your trail around obstacles, catches up after teleports, and stays on the appropriate floor. She has no player collision. The companion is hidden while hide-and-seek is active and returns after completion or cancellation; the hidden game character remains separate.
 
@@ -47,6 +47,6 @@ Headset feel and readability still need real Quest testing. The physics simulati
 
 The website uses `index.html` and the adjacent `assets` directory. Keep them together. Game-script filenames are versioned to avoid loading an older cached game after an update. GitHub Pages publishes the main branch.
 
-### Companion visibility update
+### Companion movement update
 
-Jigglypuff now arrives ahead and to one side on clear ground, at a larger size. Raise your left wrist and select **Call Jigglypuff** with the right trigger to bring her back nearby. Calling her during hide-and-seek keeps her hidden until that game ends. Each VR session starts with a fresh arrival.
+Jigglypuff arrives ahead and to one side on clear ground. She follows in visible hops with a short landing pause and squash/stretch, maintaining a 2-metre personal-space radius. She hops away when approached and relocates safely if you walk directly through her or teleport. She disappears during hide-and-seek and returns afterwards. Each VR session starts with a fresh arrival.
