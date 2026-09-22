@@ -51,6 +51,8 @@ The website uses `index.html` and the adjacent `assets` directory. Keep them tog
 
 Jigglypuff arrives ahead and to one side on clear ground. She follows in visible hops with a short landing pause and squash/stretch, maintaining a 2-metre personal-space radius. She hops away when approached and relocates safely if you walk directly through her or teleport. She disappears during hide-and-seek and returns afterwards. Each VR session starts with a fresh arrival.
 
-### Status card
+### Progress and notifications
 
-A compact upper-left card shows activity progress and Y/B/X shortcuts. It follows headset orientation, leaves the centre view clear and hides while the full menu or album is open. Press Y for the full games menu.
+There is no permanent floating status card. Discoveries, hide-and-seek clues and completed rounds produce a small notification below eye level that fades after three seconds. Y opens the menu with current activity progress and the album count. Completing a hunt no longer forces the menu open.
+
+The framed wall scoreboard beside the dartboard tracks total points, the nine darts, the last result and personal best. Memory-match progress stays at the table.
