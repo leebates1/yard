@@ -50,3 +50,7 @@ The website uses `index.html` and the adjacent `assets` directory. Keep them tog
 ### Companion movement update
 
 Jigglypuff arrives ahead and to one side on clear ground. She follows in visible hops with a short landing pause and squash/stretch, maintaining a 2-metre personal-space radius. She hops away when approached and relocates safely if you walk directly through her or teleport. She disappears during hide-and-seek and returns afterwards. Each VR session starts with a fresh arrival.
+
+### Status card
+
+A compact upper-left card shows activity progress and Y/B/X shortcuts. It follows headset orientation, leaves the centre view clear and hides while the full menu or album is open. Press Y for the full games menu.
