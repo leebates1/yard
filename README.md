@@ -138,3 +138,7 @@ The companion toggle now explicitly says **Hide companion** or **Show companion*
 Pokémon hunt balls, cards and the hunt ball visual are temporarily hidden throughout bowling, including while its menu is open. They return afterwards and collected-card progress is untouched.
 
 Up to four animated staff supporters stand in checked, clear positions outside the lane. They clap, wave and bounce after successful bowls, with a longer celebration for strikes and short synthesised applause. They pause with the game and leave when bowling ends. Existing character assets are reused.
+
+## Reactive spectators
+
+Bowling supporters turn towards the player before a bowl and track the rolling ball with their bodies and heads. They lean forward while you prepare, glance towards one another between throws, and react on the first pin impact. Staggered celebrations include clapping, raised arms, fist pumps and waves, with larger bounces for strikes and encouraging waves after misses. Their feet stay in their checked positions outside the lane. All animation pauses with the menu.
