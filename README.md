@@ -96,3 +96,11 @@ Press Y and choose **Jigglypuff playtime**. She comes within reach. Hold the rig
 Choose **Poké Ball basketball** for a clear yard court. Hold the right trigger, swing upwards and release. Gravity, backboard rebounds and rim deflections affect the visible ball; only downward crossings through the hoop score. The court scoreboard tracks ten throws, baskets and a saved personal best. Press A after a finished round to replay, or Y for the menu.
 
 The existing floor-height script, saved settings and left-thumbstick adjustment are preserved. Automated checks cover feeding, high-five debounce, physical releases, scoring direction, ten-shot rounds and replay, alongside existing game regressions. Controller feel still needs Quest testing.
+
+## Warehouse bowling
+
+Press Y and choose **Warehouse bowling** to move to a clear lane inside Unit 9. Stay behind the yellow line, hold the right trigger, swing underarm towards the pins and release. The ball uses measured controller velocity, gravity, floor bounce and rolling friction. Pin impacts transfer motion to neighbouring pins; gutter balls cannot score.
+
+This is an arcade five-frame challenge: two bowls per frame, one point per pin, maximum 50. A strike advances immediately; otherwise remaining pins stay up for the second bowl. The freestanding scoreboard shows frame scores, total and a saved best. Press A after the final frame to replay. Y pauses the action; B opens the menu and ends the game.
+
+Automated checks cover actual warehouse clearance, ten-pin setup, throwing, pin impacts, gutters, pause/resume, frame scoring, full rounds and replay. Headset throw feel still needs hands-on testing.
