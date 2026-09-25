@@ -112,3 +112,11 @@ Press Y, choose **More games →**, then **Paper-plane challenge**. You move to 
 Five planes per round, three hoops, 10 points for each hoop crossed forwards once per plane. The course scoreboard shows points, throws, longest glide and a saved best score. Press A after the fifth flight to replay. Y pauses and opens the menu; B ends the activity.
 
 Automated checks cover actual controller menu navigation, release, glide and drag, hoop direction and misses, five flights, score bounds, distance, pause, replay and cleanup. Your saved floor-height controls are unchanged.
+
+## Companion switch and lively pins
+
+Use **Y → More games → Jigglypuff: On / Off** to toggle the companion. The choice saves in this browser. She automatically disappears during darts, basketball, bowling, paper planes and memory match, then returns to exploration only if enabled. Choosing Jigglypuff playtime explicitly enables her again. Hide-and-seek remains a separate activity.
+
+Bowling pins now use 3D velocity, gravity, angular velocity, floor bounce, damping and pin-to-pin impulses. Stronger impacts launch and tumble pins; a bounded pin deck and backstop contain them. The roll gets time to settle before pins are counted and reset. This is an arcade physics model, not a full rigid-body simulator.
+
+Checks cover airborne pins and spin, five-frame scoring/replay, the controller-operated toggle, saved preference, automatic game hiding and returning to exploration.
