@@ -115,7 +115,7 @@ Automated checks cover actual controller menu navigation, release, glide and dra
 
 ## Companion switch and lively pins
 
-Use **Y → More games → Jigglypuff: On / Off** to toggle the companion. The choice saves in this browser. She automatically disappears during darts, basketball, bowling, paper planes and memory match, then returns to exploration only if enabled. Choosing Jigglypuff playtime explicitly enables her again. Hide-and-seek remains a separate activity.
+Use **Y → More games & settings → Hide companion / Show companion** to toggle the companion. The choice saves in this browser. She automatically disappears during darts, basketball, bowling, paper planes and memory match, then returns to exploration only if enabled. Choosing Jigglypuff playtime explicitly enables her again. Hide-and-seek remains a separate activity.
 
 Bowling pins now use 3D velocity, gravity, angular velocity, floor bounce, damping and pin-to-pin impulses. Stronger impacts launch and tumble pins; a bounded pin deck and backstop contain them. The roll gets time to settle before pins are counted and reset. This is an arcade physics model, not a full rigid-body simulator.
 
@@ -130,3 +130,11 @@ Bowling now has a 3.2m-wide overhead display closer to the throwing line and a m
 Bowling runs for ten frames with two bowls per frame and a maximum of 100 points using the arcade one-point-per-pin rules. The scoreboard and console show all ten frames in two rows. Ten-frame best scores save separately from the older five-frame results.
 
 A first-bowl strike launches a short colourful fireworks burst above the pin deck, including on the final frame. Spares do not trigger it. Particles fade away, pause with the game and clear on replay or exit. Checks cover ten consecutive strikes (100 points), single celebration per strike, spares, replay and exit.
+
+## Bowling supporters and clear lanes
+
+The companion toggle now explicitly says **Hide companion** or **Show companion** under **More games & settings**. Its old label incorrectly used the Find Jigglypuff activity design.
+
+Pokémon hunt balls, cards and the hunt ball visual are temporarily hidden throughout bowling, including while its menu is open. They return afterwards and collected-card progress is untouched.
+
+Up to four animated staff supporters stand in checked, clear positions outside the lane. They clap, wave and bounce after successful bowls, with a longer celebration for strikes and short synthesised applause. They pause with the game and leave when bowling ends. Existing character assets are reused.
