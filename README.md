@@ -120,3 +120,7 @@ Use **Y → More games → Jigglypuff: On / Off** to toggle the companion. The c
 Bowling pins now use 3D velocity, gravity, angular velocity, floor bounce, damping and pin-to-pin impulses. Stronger impacts launch and tumble pins; a bounded pin deck and backstop contain them. The roll gets time to settle before pins are counted and reset. This is an arcade physics model, not a full rigid-body simulator.
 
 Checks cover airborne pins and spin, five-frame scoring/replay, the controller-operated toggle, saved preference, automatic game hiding and returning to exploration.
+
+## Bowling score computer
+
+Bowling now has a 3.2m-wide overhead display closer to the throwing line and a matching computer-style console beside the approach. Both screens share live scores: two bowl cells per frame, X for a strike, / for a spare, running totals, current-frame highlight, a large total and personal best. The existing five-frame, one-point-per-pin rules remain in place. Replay clears both screens.
