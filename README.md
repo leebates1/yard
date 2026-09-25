@@ -88,3 +88,11 @@ wherever the headset believes the floor is.
 `window.yardDebug` exposes the running game for checks. VR behaviour can be exercised
 in a desktop browser by substituting `renderer.xr.getSession()`, `getReferenceSpace()`
 and `questBridge.frame`.
+
+## Jigglypuff playtime and basketball
+
+Press Y and choose **Jigglypuff playtime**. She comes within reach. Hold the right trigger to offer a berry to her mouth; release before taking another berry. With the trigger released, touch her raised right hand using either controller for a high-five. She reacts with a happy bounce, heart and controller vibration. Short cooldowns prevent accidental repeats. Her normal two-metre spacing resumes when playtime ends.
+
+Choose **Poké Ball basketball** for a clear yard court. Hold the right trigger, swing upwards and release. Gravity, backboard rebounds and rim deflections affect the visible ball; only downward crossings through the hoop score. The court scoreboard tracks ten throws, baskets and a saved personal best. Press A after a finished round to replay, or Y for the menu.
+
+The existing floor-height script, saved settings and left-thumbstick adjustment are preserved. Automated checks cover feeding, high-five debounce, physical releases, scoring direction, ten-shot rounds and replay, alongside existing game regressions. Controller feel still needs Quest testing.
