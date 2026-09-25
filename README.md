@@ -101,7 +101,7 @@ The existing floor-height script, saved settings and left-thumbstick adjustment 
 
 Press Y and choose **Warehouse bowling** to move to a clear lane inside Unit 9. Stay behind the yellow line, hold the right trigger, swing underarm towards the pins and release. The ball uses measured controller velocity, gravity, floor bounce and rolling friction. Pin impacts transfer motion to neighbouring pins; gutter balls cannot score.
 
-This is an arcade five-frame challenge: two bowls per frame, one point per pin, maximum 50. A strike advances immediately; otherwise remaining pins stay up for the second bowl. The freestanding scoreboard shows frame scores, total and a saved best. Press A after the final frame to replay. Y pauses the action; B opens the menu and ends the game.
+This is an arcade ten-frame challenge: two bowls per frame, one point per pin, maximum 100. A strike advances immediately; otherwise remaining pins stay up for the second bowl. The freestanding scoreboard shows frame scores, total and a saved best. Press A after the final frame to replay. Y pauses the action; B opens the menu and ends the game.
 
 Automated checks cover actual warehouse clearance, ten-pin setup, throwing, pin impacts, gutters, pause/resume, frame scoring, full rounds and replay. Headset throw feel still needs hands-on testing.
 
@@ -119,8 +119,14 @@ Use **Y → More games → Jigglypuff: On / Off** to toggle the companion. The c
 
 Bowling pins now use 3D velocity, gravity, angular velocity, floor bounce, damping and pin-to-pin impulses. Stronger impacts launch and tumble pins; a bounded pin deck and backstop contain them. The roll gets time to settle before pins are counted and reset. This is an arcade physics model, not a full rigid-body simulator.
 
-Checks cover airborne pins and spin, five-frame scoring/replay, the controller-operated toggle, saved preference, automatic game hiding and returning to exploration.
+Checks cover airborne pins and spin, ten-frame scoring/replay, the controller-operated toggle, saved preference, automatic game hiding and returning to exploration.
 
 ## Bowling score computer
 
-Bowling now has a 3.2m-wide overhead display closer to the throwing line and a matching computer-style console beside the approach. Both screens share live scores: two bowl cells per frame, X for a strike, / for a spare, running totals, current-frame highlight, a large total and personal best. The existing five-frame, one-point-per-pin rules remain in place. Replay clears both screens.
+Bowling now has a 3.2m-wide overhead display closer to the throwing line and a matching computer-style console beside the approach. Both screens share live scores: two bowl cells per frame, X for a strike, / for a spare, running totals, current-frame highlight, a large total and personal best. The existing ten-frame, one-point-per-pin rules remain in place. Replay clears both screens.
+
+## Ten frames and strike celebrations
+
+Bowling runs for ten frames with two bowls per frame and a maximum of 100 points using the arcade one-point-per-pin rules. The scoreboard and console show all ten frames in two rows. Ten-frame best scores save separately from the older five-frame results.
+
+A first-bowl strike launches a short colourful fireworks burst above the pin deck, including on the final frame. Spares do not trigger it. Particles fade away, pause with the game and clear on replay or exit. Checks cover ten consecutive strikes (100 points), single celebration per strike, spares, replay and exit.
