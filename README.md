@@ -104,3 +104,11 @@ Press Y and choose **Warehouse bowling** to move to a clear lane inside Unit 9. 
 This is an arcade five-frame challenge: two bowls per frame, one point per pin, maximum 50. A strike advances immediately; otherwise remaining pins stay up for the second bowl. The freestanding scoreboard shows frame scores, total and a saved best. Press A after the final frame to replay. Y pauses the action; B opens the menu and ends the game.
 
 Automated checks cover actual warehouse clearance, ten-pin setup, throwing, pin impacts, gutters, pause/resume, frame scoring, full rounds and replay. Headset throw feel still needs hands-on testing.
+
+## Paper-plane challenge
+
+Press Y, choose **More games →**, then **Paper-plane challenge**. You move to the warehouse launch line. Hold the right trigger, swing forwards and release a folded 3D paper plane. Its release velocity controls direction and speed; simplified air drag and sinking flight make it glide rather than travel like a ball. Scenery stops a flight.
+
+Five planes per round, three hoops, 10 points for each hoop crossed forwards once per plane. The course scoreboard shows points, throws, longest glide and a saved best score. Press A after the fifth flight to replay. Y pauses and opens the menu; B ends the activity.
+
+Automated checks cover actual controller menu navigation, release, glide and drag, hoop direction and misses, five flights, score bounds, distance, pause, replay and cleanup. Your saved floor-height controls are unchanged.
