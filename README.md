@@ -142,3 +142,13 @@ Up to four animated staff supporters stand in checked, clear positions outside t
 ## Reactive spectators
 
 Bowling supporters turn towards the player before a bowl and track the rolling ball with their bodies and heads. They lean forward while you prepare, glance towards one another between throws, and react on the first pin impact. Staggered celebrations include clapping, raised arms, fist pumps and waves, with larger bounces for strikes and encouraging waves after misses. Their feet stay in their checked positions outside the lane. All animation pauses with the menu.
+
+## Arcade visual polish
+
+Bowling has a maple wood-grain lane, warm illuminated edge strips, overhead light fittings and a framed TFJ BOWL sign above the live score display. Soft contact shadows ground the spectators and follow the tumbling pins. Pin shadows fade while airborne and reset with each frame.
+
+Darts, memory match, paper planes and basketball have matching framed activity signs with their own accent colours. The basketball court also has a framed score display and a mast supporting its sign and light fitting.
+
+One warm fill light is reused across these activities and switches off when returning to exploration. The light does not cast shadow maps; contact shadows use a shared small canvas texture. No postprocessing or global lighting changes are introduced. Existing game saves and the standing-height script are preserved.
+
+The actual yard was rendered in a desktop browser for placement and readability checks. Automated gameplay checks passed for all existing activities, replay, transitions and the preserved floor offset. Quest performance and headset appearance still need a real-device check.
