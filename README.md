@@ -152,3 +152,15 @@ Darts, memory match, paper planes and basketball have matching framed activity s
 One warm fill light is reused across these activities and switches off when returning to exploration. The light does not cast shadow maps; contact shadows use a shared small canvas texture. No postprocessing or global lighting changes are introduced. Existing game saves and the standing-height script are preserved.
 
 The actual yard was rendered in a desktop browser for placement and readability checks. Automated gameplay checks passed for all existing activities, replay, transitions and the preserved floor offset. Quest performance and headset appearance still need a real-device check.
+
+## Warehouse mini-golf
+
+Press **Y → More games & settings → Warehouse mini-golf**. Six different holes rotate through a checked, clear warehouse bay: First delivery, Crate slalom, Loading ramp, Pipe pass, Bank holiday and Dispatch finale. The green, loading ramps, pallet obstacles, tunnel, cup, flag and scorecard are 3D objects in the yard. Bowling and paper planes stay separate activities.
+
+Hold the **right trigger** and swing the putter through the ball, then release. Contact uses the measured movement of the whole putter face; clicking or missing does not add a stroke. The shaft telescopes down to the green so you can stand upright at different heights. Gentle putts drop into the cup; fast ones roll over it. Turf friction, ramp slopes, rails, pallets and the pipe walls affect the ball.
+
+**A** moves you beside a stopped ball. After finishing a hole, A advances to the next; after hole six, A starts another round. Each hole has an eight-stroke limit so a difficult hole cannot block the rest of the course. Y pauses physics and opens the menu; B ends the activity. The putter disengages during menus and teleports, and a rolling ball resumes afterwards. Walking, turning and teleporting are suspended while the trigger engages the putter.
+
+The fixed scorecard shows strokes, pars, six-hole total and your saved lowest score. Course par is 18: Gold for 18 strokes or fewer, Silver up to 24 and Bronze for completing the course. Mini-golf saves under its own key and leaves all other progress untouched. The companion and hunt collectibles hide throughout golf and return afterwards according to the existing companion preference. Your standing-height controls are unchanged.
+
+Checks cover controller menu selection, upright putting at two hand heights, measured hits, missed/stationary swings, pause, continued rolling after interruption, six-hole scoring, single cup capture, saved best, replay, stroke limit, re-entry and restoration on exit. Physics checks cover friction stopping distances, slow/fast cup passes, rail/pallet rebounds, ramp gravity, quick swept putter contact, a reachable route through every layout and consistent rolling at 72/90/120 Hz. Existing VR games and the preserved floor-offset checks also passed. Putter feel still needs real Quest testing.
