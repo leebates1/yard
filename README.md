@@ -166,3 +166,24 @@ Gentle putts drop into the cup; fast ones roll over it. Turf friction, ramp slop
 The fixed scorecard shows strokes, pars, six-hole total and your saved lowest score. Course par is 18: Gold for 18 strokes or fewer, Silver up to 24 and Bronze for completing the course. Mini-golf saves under its own key and leaves all other progress untouched. The companion and hunt collectibles hide throughout golf and return afterwards according to the existing companion preference. Your standing-height controls are unchanged.
 
 Automated checks construct the actual yard and exercise the WebXR bridge with separate grip and pointing poses. They cover short/tall fitting, comfortable grip angle, a fixed shaft during strokes, wrist-only contact, raised-club misses, the contact guide, tracking loss, physical hits, pause, continued rolling after interruption, six-hole scoring, saved best, replay, the stroke limit and restoration on exit. Physics checks cover face-led direction, soft taps, tracking jumps, friction stopping distances, slow/fast cup passes, rebounds, ramp gravity, reachable routes and rolling at 72/90/120 Hz. Existing VR-game regressions and the preserved floor-offset checks pass. Club feel and visual appearance still need a real Quest check.
+
+## Arcade wall of fame
+
+A permanent 3.6-metre framed display is mounted on the office divider inside the Unit 9 warehouse. Visit using **Y → More games & settings → Arcade wall of fame**, or walk to it near the back offices. The shortcut checks a clear approach, turns you towards the wall and temporarily hides the companion. Walking away restores exploration; B returns to the menu. The display stays in the yard after leaving VR.
+
+Eight large panels show Mollie’s personal records, collection progress, current medals and the next gold target. The bronze, silver and gold 3D cups on the shelf become coloured when any activity reaches that tier. An improved record briefly pulses the frame mint. The canvas redraws only when records change. Existing scores are read from their existing keys, and records are personal to this browser.
+
+| Activity | Bronze | Silver | Gold |
+| --- | --- | --- | --- |
+| Bowling | 10 pins | 50 pins | 80 pins |
+| Darts | 50 points | 150 points | 300 points |
+| Six-hole mini-golf | Complete the course | 24 strokes or fewer | 18 strokes or fewer |
+| Basketball | 2 baskets | 5 baskets | 8 baskets |
+| Paper planes | 10 points | 50 points | 100 points |
+| Memory match | Complete an album deck | Pairs + 2 turns or fewer | One turn per pair |
+| Card album | 6 cards | 12 cards | All 18 cards |
+| Jigglypuff hide-and-seek | 1 completed hunt | 3 completed hunts | 5 completed hunts |
+
+Memory match now saves the fewest turns separately for each album-deck size, from two to six pairs, under `tfj-memory-bests-v1`. Practice rounds are excluded. The wall shows the largest completed deck and its best result; lower results win for memory and golf. Resetting a round retains records. Other saved progress and the user's standing-height script are preserved.
+
+Checks cover saved-record loading, score direction, medal boundaries, missing/corrupt/denied storage, practice exclusion, single memory saves, replay, the real controller menu, safe wall approach and sightlines, live updates, trophy colours, avoiding redundant texture redraws, companion clearance and walking away. Existing VR-game and floor-offset regressions pass. Wall appearance and readability still need a real Quest check.
