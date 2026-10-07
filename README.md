@@ -32,11 +32,11 @@ Visible 3D darts stick where they hit. Scores match the board artwork's singles,
 
 - Pokémon hunt: hold trigger, swing and release a Poké Ball at the hidden balls. The existing 18-card collection and save are retained.
 - Jigglypuff: follow the room and sound clues; get close, point and pull the trigger. Find her three times.
-- Left stick walks; right stick turns.
+- Left stick walks; right stick turns. During RC racing, the left stick steers the car and ordinary walking/turning is suspended.
 - Click the left stick in and push it up or down to raise or lower yourself; release to save. See [Standing height](#standing-height).
-- Right grip teleports during games, except while using the album inspector. Right trigger also teleports when simply exploring.
+- Right grip teleports during games, except while using the album inspector or RC racing. Right trigger also teleports when simply exploring.
 - Y opens/closes the menu. B goes back. **Back to exploring** ends the game while keeping VR active.
-- X returns to the yard entrance. Use the Meta menu to exit VR.
+- X returns to the yard entrance, or to the driver spot during RC racing. Use the Meta menu to exit VR.
 
 Forklift challenges remain desktop-only.
 
@@ -115,7 +115,7 @@ Automated checks cover actual controller menu navigation, release, glide and dra
 
 ## Companion switch and lively pins
 
-Use **Y → More games & settings → Hide companion / Show companion** to toggle the companion. The choice saves in this browser. She automatically disappears during darts, basketball, bowling, paper planes and memory match, then returns to exploration only if enabled. Choosing Jigglypuff playtime explicitly enables her again. Hide-and-seek remains a separate activity.
+Use **Y → More games & settings → Hide companion / Show companion** to toggle the companion. The choice saves in this browser. She automatically disappears during darts, basketball, bowling, paper planes, memory match, mini-golf and RC racing, then returns to exploration only if enabled. Choosing Jigglypuff playtime explicitly enables her again. Hide-and-seek remains a separate activity.
 
 Bowling pins now use 3D velocity, gravity, angular velocity, floor bounce, damping and pin-to-pin impulses. Stronger impacts launch and tumble pins; a bounded pin deck and backstop contain them. The roll gets time to settle before pins are counted and reset. This is an arcade physics model, not a full rigid-body simulator.
 
@@ -171,7 +171,7 @@ Automated checks construct the actual yard and exercise the WebXR bridge with se
 
 A permanent 3.6-metre framed display is mounted on the office divider inside the Unit 9 warehouse. Visit using **Y → More games & settings → Arcade wall of fame**, or walk to it near the back offices. The shortcut checks a clear approach, turns you towards the wall and temporarily hides the companion. Walking away restores exploration; B returns to the menu. The display stays in the yard after leaving VR.
 
-Eight large panels show Mollie’s personal records, collection progress, current medals and the next gold target. The bronze, silver and gold 3D cups on the shelf become coloured when any activity reaches that tier. An improved record briefly pulses the frame mint. The canvas redraws only when records change. Existing scores are read from their existing keys, and records are personal to this browser.
+Nine panels in a three-by-three grid show Mollie’s personal records, collection progress, current medals and the next gold target. The bronze, silver and gold 3D cups on the shelf become coloured when any activity reaches that tier. An improved record briefly pulses the frame mint. The canvas redraws only when records change. Existing scores are read from their existing keys, and records are personal to this browser.
 
 | Activity | Bronze | Silver | Gold |
 | --- | --- | --- | --- |
@@ -180,10 +180,31 @@ Eight large panels show Mollie’s personal records, collection progress, curren
 | Six-hole mini-golf | Complete the course | 24 strokes or fewer | 18 strokes or fewer |
 | Basketball | 2 baskets | 5 baskets | 8 baskets |
 | Paper planes | 10 points | 50 points | 100 points |
+| RC car racing | Complete a lap | Lap in 20 seconds | Lap in 14 seconds |
 | Memory match | Complete an album deck | Pairs + 2 turns or fewer | One turn per pair |
 | Card album | 6 cards | 12 cards | All 18 cards |
 | Jigglypuff hide-and-seek | 1 completed hunt | 3 completed hunts | 5 completed hunts |
 
-Memory match now saves the fewest turns separately for each album-deck size, from two to six pairs, under `tfj-memory-bests-v1`. Practice rounds are excluded. The wall shows the largest completed deck and its best result; lower results win for memory and golf. Resetting a round retains records. Other saved progress and the user's standing-height script are preserved.
+Memory match now saves the fewest turns separately for each album-deck size, from two to six pairs, under `tfj-memory-bests-v1`. Practice rounds are excluded. The wall shows the largest completed deck and its best result; lower results win for memory, golf and RC racing. Resetting a round retains records. Other saved progress and the user's standing-height script are preserved.
 
 Checks cover saved-record loading, score direction, medal boundaries, missing/corrupt/denied storage, practice exclusion, single memory saves, replay, the real controller menu, safe wall approach and sightlines, live updates, trophy colours, avoiding redundant texture redraws, companion clearance and walking away. Existing VR-game and floor-offset regressions pass. Wall appearance and readability still need a real Quest check.
+
+
+## RC car racing
+
+Choose **Y → More games & settings → RC car racing** to move beside the Pallet Circuit in the Unit 9 warehouse. Watch a detailed 3D rally buggy from the driver spot. After the three-second start lights, drive clockwise through each highlighted checkpoint for a three-lap time trial.
+
+- **Left thumbstick:** steer left/right.
+- **Right trigger:** proportional accelerator. Release the menu-selection trigger before driving.
+- **Right grip:** brake, then reverse when stopped.
+- **A:** rescue at the last passed gate with a two-second penalty; after finishing, start another race.
+- **X:** return to the driver viewpoint without resetting the race.
+- **Y:** pause/resume through the menu; **B** while racing ends the activity and opens the menu.
+
+The fixed scoreboard shows lap times, race time and saved bests. Front wheels steer, all wheels spin and the body leans under acceleration and cornering. Fixed-step bicycle steering, acceleration, coasting, reverse and bumper collisions keep the car inside matching rails and around the shipping island. Checkpoints require ordered crossings in the correct direction; cutting back over the start line cannot score a lap.
+
+Ordinary joystick walking, snap turning and teleporting are disabled during racing so steering and braking cannot move the player. Room-scale head movement remains available. Menus, hidden sessions and disconnected controllers freeze the race; resuming requires releasing the accelerator and brake before powering the car. The companion and card-hunt visuals hide during racing and return afterwards.
+
+Lap and complete-race bests save separately under `tfj-rc-best-lap-v1` and `tfj-rc-best-race-v1` as integer milliseconds. Lower times win, rescue penalties count, and replay retains records. The wall of fame now includes RC lap medals. Existing card progress, other game records and the standing-height script are preserved.
+
+Automated checks physically drive all three laps using the real Quest input bridge, validate warehouse clearance, steering and visible wheels, collision bounds, gate order/direction, pause, disconnect, reverse, rescue penalties, X behavior, exclusive controls, record saves, wall updates and replay cleanup. Controller feel and appearance still need a real Quest test.
