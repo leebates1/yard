@@ -74,7 +74,7 @@ The framed wall scoreboard beside the dartboard tracks total points, the nine da
 ## Editing this project
 
 This repository holds built output only. There is no source tree and no source maps;
-`assets/runtime-1.js` is the yard itself and `assets/runtime-2-<hash>.js` is the VR
+`assets/runtime-1-<hash>.js` is the yard itself and `assets/runtime-2-<hash>.js` is the VR
 layer, both minified. Changes are therefore made by editing a bundle directly, copying
 it to a new content-hashed filename, and pointing `index.html` at the copy. Readable
 logic is better placed in an inline script in `index.html`.
@@ -208,3 +208,11 @@ Ordinary joystick walking, snap turning and teleporting are disabled during raci
 Lap and complete-race bests save separately under `tfj-rc-best-lap-v1` and `tfj-rc-best-race-v1` as integer milliseconds. Lower times win, rescue penalties count, and replay retains records. The wall of fame now includes RC lap medals. Existing card progress, other game records and the standing-height script are preserved.
 
 Automated checks physically drive all three laps using the real Quest input bridge, validate warehouse clearance, steering and visible wheels, collision bounds, gate order/direction, pause, disconnect, reverse, rescue penalties, X behavior, exclusive controls, record saves, wall updates and replay cleanup. Controller feel and appearance still need a real Quest test.
+
+## Ketterer Court exterior
+
+The buildings across the road now follow the supplied Street View reference: grey corrugated warehouses, blue shutters and roof edging, glazed offices, shallow pitched roofs, gutters, drainage and street lamps. Looking out from the TF Jones yard, **Neil Signs is on the left** and **A&M Ceramics is on the right**. Their signs are recreated from the references; building dimensions remain approximate.
+
+The flat tree backdrops are replaced with bark-textured trunks, branches and varied leaf crowns. Shared instanced geometry and opaque, alpha-tested foliage limit rendering cost for Quest. The improved exterior appears both in desktop exploration and VR.
+
+Checks confirm that all 410 original gameplay collision boxes and the original yard geometry remain unchanged. The new buildings sit beyond the walking boundary, and trees are placed behind the opposite roofs. Existing games, records and the standing-height script are preserved. Actual-scene checks cover finite geometry, exterior bounds and rendering budgets, alongside the existing game regressions. Exterior appearance and performance still need a headset check.
