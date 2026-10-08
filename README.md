@@ -192,7 +192,7 @@ Checks cover saved-record loading, score direction, medal boundaries, missing/co
 
 ## RC car racing
 
-Choose **Y → More games & settings → RC car racing** to move beside the Pallet Circuit in the Unit 9 warehouse. Watch a detailed 3D rally buggy from the driver spot. After the three-second start lights, drive clockwise through each highlighted checkpoint for a three-lap time trial.
+Choose **Y → More games & settings → RC car racing** to move beside the Pallet Circuit in the Unit 9 warehouse. Watch a detailed TF Jones 3D rally buggy from the driver spot. Its navy and blue bodywork has yellow trim and the existing official TF Jones wordmark on the bonnet, roof, both side panels and rear wing. After the three-second start lights, drive clockwise through each highlighted checkpoint for a three-lap time trial.
 
 - **Left thumbstick:** steer left/right.
 - **Right trigger:** proportional accelerator. Release the menu-selection trigger before driving.
