@@ -224,3 +224,15 @@ Three small flocks of gulls and pigeons circle above the yard, alternating betwe
 After starting exploration or entering VR, soft spatial bird calls follow nearby birds and a very quiet breeze adds atmosphere. **Sound on/off** controls the ambience. Indoor rooms on both storeys, game menus, pauses and hidden pages or VR sessions silence it. Sounds are generated locally and need no downloads. Returning outdoors resumes the ambience without creating another audio context.
 
 Checks cover desktop and VR animation, actual roof contact, clear flight bounds, hidden-session freezing, stable geometry and indoor sound gating. Audio checks cover silent loading, user-gesture activation, mute handling, bounded voices and cleanup. Existing game regressions, the card collection, records and standing-height controls are preserved. Headset sound and performance still need a real-device check.
+
+## Everyday life around the yard
+
+The existing ten employees now have short routines around their workspaces. Lee walks along the reception frontage, workshop and stores staff inspect nearby stock, Dan and Sam visit and chat around the upstairs coffee area, with a hand-held mug for Dan, and seated office staff type at their desks. Staff look towards nearby visitors and give an occasional greeting. Their supplied faces, hair, clothing and nameplates are reused.
+
+Routes are checked against the existing rooms, floors and obstacles, with warehouse game areas and the darts throwing area kept clear. Moving staff pause for the player, companion and other employees. Their original collision boxes and nameplates follow their positions; the teleport preview uses those current bounds and treats people as obstacles instead of landing surfaces. Routines pause during games, menus, desktop pause and hidden pages or VR sessions.
+
+The existing grove has gentle branch and crown sway, with faster flutter at leaf edges. A shared GPU clock animates the trees without rebuilding geometry or uploading every tree matrix each frame. Trunks and roots stay planted, all original tree sites remain, and the grove keeps its existing eight draws and triangle budget.
+
+A TF Jones service van occasionally arrives across the road, parks by Neil Signs, unloads a parcel with a courier and drives away. Its route stays beyond the walking boundary and uses no gameplay collision boxes. The van and courier pause for menus, games and hidden sessions.
+
+No new controls are required. The card collection, activity records and supplied standing-height script are preserved. Automated actual-scene and lifecycle checks cover the routines, clearance, personal space, animation ownership, dynamic collision bounds, NPC teleport blocking, delivery sequence and shader movement. All existing game and ambience checks are also run. Desktop appearance is checked on the published site; Quest performance and headset appearance still need a real-device check.
