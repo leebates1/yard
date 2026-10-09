@@ -238,3 +238,11 @@ A white TF Jones service van occasionally drives along the actual road and pulls
 The road route and pedestrian path are checked against the original cars, fences, buildings and low tree branches. The driver yields to the player's physical position, camera, companion and employees; the routine pauses during games, forklift use, menus and hidden sessions. A moving courier bounds check blocks VR teleporting onto or immediately beside the person without changing the original yard collision boxes.
 
 No new controls are required. The card collection, activity records and supplied standing-height script are preserved. Automated actual-scene and lifecycle checks cover the routines, clearance, personal space, animation ownership, dynamic collision bounds, NPC teleport blocking, delivery sequence and shader movement. All existing game and ambience checks are also run. Desktop appearance is checked on the published site; Quest performance and headset appearance still need a real-device check.
+
+## Delivery van and driver polish
+
+The delivery driver now has rounded clothing and limbs, safety boots, a hi-vis vest, and a more detailed face and hands. Foot placement follows the distance travelled, with planted steps, bent knees, heel and toe movement, body weight shifts and softer arm motion. Short acceleration ramps and rounded walking corners smooth the route; the driver turns while the doors close, grips the parcel at its sides and backs away more slowly after collecting it.
+
+The white van has shaped body panels, a sloping curved windscreen, wheel-arch openings, molded bumpers, treaded tyres, detailed wheel hubs, mirrors, wipers and lamps. Its side and rear logos retain the complete supplied PNG, original colours and proportions. Merged geometry and shared instances keep the delivery scene to 28 draw objects and fewer than 25,000 triangles, without extra lights or shadow maps.
+
+Actual-scene checks cover planted feet at 30 and 90 frames per second, finite anatomical bounds, kerb and cab-door clearance, parcel pickup/drop continuity, the complete route, yielding and paused poses. Existing game checks and standing-height preservation also pass. Desktop visuals are checked on the published website; walking feel and performance still need a Quest test.
