@@ -233,7 +233,7 @@ Routes are checked against the existing rooms, floors and obstacles, with wareho
 
 The existing grove has gentle branch and crown sway, with faster flutter at leaf edges. A shared GPU clock animates the trees without rebuilding geometry or uploading every tree matrix each frame. Trunks and roots stay planted, all original tree sites remain, and the grove keeps its existing eight draws and triangle budget.
 
-A white TF Jones service van occasionally drives along the actual road and pulls over beside the yard. Its side and rear panels use the supplied full logo, including “Enhancing Building Safety,” with the original colours and proportions. The driver opens the cab door, gets out, retrieves a box from the rear and walks through the real yard gate into the Unit 8 stores/workshop. After leaving the box on the delivery stand, the driver returns, closes the doors, gets back into the cab and drives away.
+A white TF Jones service van occasionally drives along the actual road and pulls over beside the yard. Its side and rear panels use the supplied full logo, including “Enhancing Building Safety,” with the original colours and proportions. The driver opens the cab door, gets out, retrieves a box from the rear and walks through the real yard gate into the Unit 8 stores/workshop. The Stores worker brings out a trolley, receives the box and wheels it further inside. The driver returns, closes the doors, gets back into the cab and drives away.
 
 The road route and pedestrian path are checked against the original cars, fences, buildings and low tree branches. The driver yields to the player's physical position, camera, companion and employees; the routine pauses during games, forklift use, menus and hidden sessions. A moving courier bounds check blocks VR teleporting onto or immediately beside the person without changing the original yard collision boxes.
 
@@ -248,3 +248,15 @@ The white van has shaped body panels, a sloping curved windscreen, wheel-arch op
 Silver and blue hatchbacks occasionally pass along the estate road. Their wheels follow distance travelled; they slow down for the van, courier, visitors and each other. Cars reuse shared instanced geometry, and their visible bounds block teleport landing on a car. Wind stirs a few leaves and small scraps along the verges. Quiet engine sounds follow nearby moving vehicles when outdoor sound is enabled, using the existing audio context. Traffic, foliage and staff delivery gestures pause during games, forklift use, menus and hidden pages or VR sessions.
 
 Actual-scene checks cover planted feet at 30 and 90 frames per second, finite anatomical bounds, kerb and cab-door clearance, parcel pickup/drop continuity, the complete route, yielding and paused poses. Existing game checks and standing-height preservation also pass. Desktop visuals are checked on the published website; walking feel and performance still need a Quest test.
+
+## Connected yard routines (v32)
+
+The courier now has a rounded head surface, clearer eyes, a curved baseball-cap bill, a polo collar and placket, fitted trousers and smoother shading. Its independent skeleton keeps planted steps, shoulder movement and the existing parcel grip. Original staff faces, hair and models are unchanged.
+
+A Stores employee brings the workshop trolley forward for the delivery, receives the carton and wheels it further inside before returning to work. Hands follow the trolley handles, the castors roll, and the existing bench collision record follows the trolley.
+
+An employee occasionally arrives in a green-grey hatchback, enters through the gate and parks in the empty bay nearest Unit 9. The driver opens the door, gets out, locks the car, walks through the office entrance, later returns and drives away. Vehicle and pedestrian routes yield to visitors and other traffic. Both the car and person block VR teleport landing.
+
+Six courtyard pigeons peck, take small steps and hop. Approaching them makes them take off, circle and land again once there is room. These additions appear in desktop exploration and VR and pause during games, menus, forklift use and hidden sessions. There are no new controls.
+
+The arrival, trolley additions and ground pigeons add 26 draw objects; the courier reuses its existing 13 skinned draws. No extra lights or shadow maps are added. Automated checks cover the complete connected cycle, actual parking/office clearances, trolley hand contact, pigeon scatter/return, pause gates and all existing games. The complete supplied van logo, original yard geometry, saved records and standing-height script remain preserved. Live desktop visuals are checked after publishing; Quest appearance and performance still need a headset check.
